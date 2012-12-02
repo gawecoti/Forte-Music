@@ -1,0 +1,45 @@
+.edit-info h2 {
+	margin-bottom: 10px;
+}
+
+.edit-info h4 {
+	margin: 10px 0 10px 0;
+}
+
+.edit-button {
+	margin-top: 20px;
+}
+
+.red {
+	background: hsl(0, 43%, 91%);
+	width: 200px;
+	margin-bottom: 10px;
+	display: block;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.green {
+	background: #8cef8c;
+	width: 250px;
+	margin-bottom: 10px;
+	display: block;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.add {
+	margin: 10px 0 0 0;
+}
+
+.visit {
+	margin-bottom: 10px;
+}
+
+.visit a:hover {
+	border-bottom: 1px solid #AAAAAA; 
+}
+
+.thick {
+	font-style: bold;
+}

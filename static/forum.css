@@ -1,0 +1,60 @@
+/*New Thread Button*/
+#add-thread {
+	float: right;
+}
+
+#forum {
+	float: left;
+}
+
+/*Rules for forum*/
+.rules {
+	background: #EEEEEE;
+	padding: 5px;
+	margin-bottom: 20px;
+	border: 1px solid #BBBBBB;
+}
+
+.rules h5 {
+	margin-bottom: 10px;
+}
+
+/*Thread styling*/
+.thread {
+	background: #555555;
+	padding: 5px;
+}
+
+.thread:hover {
+	background: #333333;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+}
+
+.color {
+	color: #FFFFFF;
+	letter-spacing: 1pt;
+	font-weight: 100;
+}
+
+.left {
+	padding: 10px 0 0 10px;
+}
+
+.right {
+	text-align: right;
+	border-left: 1px solid #FFFFFF;
+	padding-left: 30px;
+}
+
+/*Add Thread*/
+#content {
+	width: 510px;
+	height: 300px;
+}
+
+#submit-thread {
+	float: right;
+}
+

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Forte Music Community - Home</title>
+		<link rel="stylesheet" href="/static/base.css">
+		<link rel="stylesheet" href="/static/skeleton.css">
+		<link rel="stylesheet" href="/static/navigation.css">
+		<link rel="stylesheet" href="/static/home.css">
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src="/static/login.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="login" style="display:none">
+			<div class="container">
+				<div class="shift">
+					<div class="two columns alpha">
+						<h2>Login</h2>
+					</div>
+					<div class="nine columns omega">
+						<form method="post">
+							<input type="text" name="username-login" value="" placeholder="Username">
+							<input type="password" name="password-login" value="" placeholder="Password">
+							<input type="submit" value="Login">
+							<a class="close">&#215;</a>
+						</form>		
+					</div>							
+				</div>		
+			</div>						
+		</div>
+		<div class="container">
+			<p class="error">{{invalid}}</p>
+			<div class="sixteen columns top">
+				<div class="six columns alpha">
+					<div class="logo">
+						<a href="http://www.forte-music-community.appspot.com">
+							<img src="/static/images/logo.png" alt="Forte Music">
+						</a>					
+					</div>
+				</div>
+				<div class="ten columns omega">
+					<nav>
+						<ul>
+							<li><a href="http://www.forte-music-community.appspot.com">Home</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/events">Events</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/forum/home">Forum</a></li>
+							<li><button class="login-trigger">Login</button></li>
+						</ul>
+					</nav>
+				</div>			
+			</div>
+
+			<div class="sixteen columns top-body">
+				<img class="guitar" src="/static/images/guitar.jpg" alt="Guitar">
+				<h2><span>A home for professional musicians</span></h2>
+				<h3><span>Sign Up</span></h3>
+				<form class="signup" method="post">
+					<input type="text" name="username-signup" value="" placeholder="Username">
+					<input type="text"  name="email-signup" value="" placeholder="Email Address">
+					<br>
+					<input type="password" name="password-signup" value="" placeholder="Password">
+					<input type="password" name="verify-password-signup" value"" placeholder="Re-enter Password">
+					<br>
+					<input class="signup-button" type="submit" value="Sign Up">
+					<p class="error">{{error}}</p>		
+				</form>	
+			</div>
+
+			<div class="sixteen columns body">
+				<ul>
+					<li class="six columns alpha box">
+						<h4>Connect With Other Musicians</h4>
+						<img src="/static/images/connect.png" alt="Connect">
+						<p>Participate in forums and check  out other people's profiles.</p>
+					</li>
+					<li class="five columns box">
+						<h4>Create Local Events</h4>
+						<img src="/static/images/calendar.png" alt="Calendar">
+						<p>Create an event and invite your friends or attend another one.</p>
+					</li>
+					<li class="five columns omega box">
+						<h4>Show Off Your Profile</h4>
+						<img src="/static/images/profile.png" alt="Profile">
+						<p>Add your music and share it with the world.</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sixteen columns testimonials">
+				<div class="eight columns alpha">
+					<blockquote>
+						<p>This is one of the best music communities I've ever been a part of.</p>
+						<h5>- Naeem Talukdar</h5>
+					</blockquote>
+				</div>
+				<div class="eight columns omega">
+					<blockquote>
+						<p>This is one of the best music communities I've ever been a part of.</p>
+						<h5>- Jonathan Doe</h5>
+					</blockquote>				
+				</div>
+			</div>
+
+			<div class="sixteen columns bottom">
+				<footer>
+					<p class="left">
+						<a href="">Legal</a> |
+						<a href="">Security</a> |
+						<a href="">Contact</a>
+					</p>
+					<p class="right">Made in Toronto <img src="/static/images/canada.png" alt="Canada"></p>	
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

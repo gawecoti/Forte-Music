@@ -1,0 +1,94 @@
+/*Login Bar*/
+.login {
+	width: 100%;
+	background-color: #222222;
+	margin: 0;
+	padding-top: 30px;
+}
+
+.login h2 {
+	color: #FFFFFF;
+	letter-spacing: 2pt;
+}
+
+.shift {
+	margin-left: 160px;
+}
+
+.close {
+	font-size: 15px;
+	text-decoration: none;
+	color: white;
+}
+
+.close:hover {
+	color: #AAAAAA;
+	cursor: pointer;
+}
+
+/*Navigation*/
+.top {
+	margin: 30px 0 15px 0;
+}
+
+nav {
+	text-align: right;
+}
+
+#user {
+	display: block;
+	margin-bottom: 3px;
+}
+
+#user a:hover {
+	border-bottom: 1px solid #AAAAAA; 
+}
+
+nav ul {
+	margin: 0;
+}
+
+nav ul li {
+	display: inline;
+	margin: 0 10px 0 10px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	letter-spacing: 1pt;
+}
+
+nav ul li a:hover {
+	border-bottom: 1px solid #AAAAAA;
+}
+
+li form { 
+	display: inline;
+}
+
+/*Footer*/
+footer {
+	border-top: 1px solid #AAAAAA;
+	padding-top: 10px;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer a:hover {
+	border-bottom: 1px solid #AAAAAA;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+

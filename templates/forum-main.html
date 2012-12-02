@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Forte Music Community - Forum</title>
+		<link rel="stylesheet" href="/static/base.css">
+		<link rel="stylesheet" href="/static/skeleton.css">
+		<link rel="stylesheet" href="/static/navigation.css">
+		<link rel="stylesheet" href="/static/forum.css">
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sixteen columns top">
+				<div class="six columns alpha">
+					<div class="logo">
+						<a href="http://www.forte-music-community.appspot.com">
+							<img src="/static/images/logo.png" alt="Forte Music">
+						</a>				
+					</div>
+				</div>
+				<div class="ten columns omega">
+					<nav>
+						<h7 id="user">Welcome <a href="/profile/{{username}}">{{username}}</a></h7>		
+						<ul>
+							<li><a href="http://www.forte-music-community.appspot.com">Home</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/events">Events</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/forum/home">Forum</a></li>
+							<li>| <a href="http://www.forte-music-community.appspot.com/editprofile">Edit Profile</a></li>
+							<li>
+								<form action="/logout" method="post">
+									<input type="hidden" name="check" value="{{check}}">
+									<input type="submit" name="Logout" value="Logout">
+								</form>
+							</li>
+						</ul>					
+					</nav>
+				</div>			
+			</div>
+
+			<div class="sixteen columns top-body">
+				<div class="row">
+					<h2>Forum</h2>
+				</div>
+				<div class="rules">
+					<h5>Rules :</h5>
+					<ul>
+						<li>1. Be friendly</li>
+						<li>2. Do not advertise</li>
+						<li>3. No vulgarity</li>
+						<li>5. Have fun!</li>
+					</ul>
+				</div>
+				<a href="http://www.forte-music-community.appspot.com/forum/category/generaldiscussion">
+					<div class="row thread">
+						<div class="nine columns alpha left">
+							<h3 class="color">General Discussion</h3>
+						</div> 
+						<div class="six columns omega right">
+							<h4 class="color">Last Thread Posted: {{times[0]}}</h4>
+							<h5 class="color">Number of Threads: {{thread[0]}}</h5>
+						</div>				
+					</div>
+				</a>
+				<a href="http://www.forte-music-community.appspot.com/forum/category/musictheory">
+					<div class="row thread">
+						<div class="nine columns alpha left">
+							<h3 class="color">Music Theory</h3>
+						</div> 
+						<div class="six columns omega right">
+							<h4 class="color">Last Thread Posted: {{times[1]}} </h4>
+							<h5 class="color">Number of Threads: {{thread[1]}}</h5>
+						</div>				
+					</div>
+				</a>
+				<a href="http://www.forte-music-community.appspot.com/forum/category/albumreview">
+					<div class="row thread">
+						<div class="nine columns alpha left">
+							<h3 class="color">Album Review</h3>
+						</div> 
+						<div class="six columns omega right">
+							<h4 class="color">Last Thread Posted: {{times[2]}}</h4>
+							<h5 class="color">Number of Threads: {{thread[2]}}</h5>
+						</div>			
+					</div>
+				</a>	
+			</div>
+			<div class="sixteen columns bottom">
+				<footer>
+					<p class="left">
+						<a href="">Legal</a> |
+						<a href="">Security</a> |
+						<a href="">Contact</a>
+					</p>
+					<p class="right">Made in Toronto <img src="/static/images/canada.png" alt="Canada"></p>	
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

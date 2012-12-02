@@ -1,0 +1,56 @@
+#add-event {
+	float: right;
+}
+
+#find-event {
+	width: 300px;
+}
+
+#submit-event {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.event {
+	background: #EEEEEE;
+	float: left;
+	margin: 0 60px 20px 0;
+	padding: 10px;
+	width: 250px;
+	border: 1px solid #BBBBBB;
+}
+
+#event-img {
+	padding-left: 65px;
+}
+
+.event:nth-child(3n) {
+	margin-right: 0;
+}
+
+.header {
+	border-bottom: 1px solid #666666;
+	text-align: center;
+	margin: 0 0 8px 0;
+}
+
+.details p {
+	margin: 0;
+}
+
+#rsvp-button {
+	margin: 0 5px 10px 0;
+	float: right;
+}
+
+.confirm {
+	background: #8cef8c;
+	width: 150px;
+	display: block;
+	text-align: center;
+	border-radius: 3px;
+}
+

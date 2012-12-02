@@ -1,0 +1,57 @@
+#back-button {
+	float: right;
+}
+
+/*Profile section*/
+.profile {
+	background: #555555;
+}
+
+.profile img {
+	margin: 10px 0 0 50px;
+}
+
+.color {
+	color: #FFFFFF;
+	letter-spacing: 1pt;
+	font-weight: 100;
+	text-align: center;
+}
+
+/*Content section*/
+.content {
+	background: #DDDDDD;
+	float: right;
+	padding: 10px;
+	width: 750px;
+}
+
+.content h4 {
+	font-style: italic;
+}
+
+.content p {
+	font-size: 16px;
+	letter-spacing: 1pt;
+	line-height: 1.7em;
+}
+
+.submit-button {
+	float: right;
+}
+
+/*Submit content*/
+.reply {
+	margin: 0 0 40px 0;
+	display: none;
+}
+
+#post-button {
+	float: right;
+	margin-bottom: 0;
+}
+
+#create-post {
+	width: 740px;
+	height: 350px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Forte Music Community - Events</title>
+		<link rel="stylesheet" href="/static/base.css">
+		<link rel="stylesheet" href="/static/skeleton.css">
+		<link rel="stylesheet" href="/static/navigation.css">
+		<link rel="stylesheet" href="/static/events.css">
+		<link rel="stylesheet" href="/static/reveal.css">	
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    	<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="/static/reveal.js"></script>
+		<script tye="text/javascript">
+			$(function() {
+				$('#datepicker').datepicker();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="myModal" class="reveal-modal">
+			<div class="center">
+				<h3>Add Event</h3>
+				<form method="post">
+					<input type="text" name="event-name" placeholder="Event Name">
+					<br/>
+					<input type="text" name="date" id="datepicker" placeholder="Date"/>
+					<br/>
+					<input type="text" name="city" placeholder="City">
+					<br/>
+					<input type="text" name="address" placeholder="Address">
+					<br/>
+					<input type="time" name="time" placeholder="Time">
+					<br/>
+					<input type="submit" name="add-event" value="Submit" id="submit-event">
+				</form>
+			<a class="close-reveal-modal">&#215;</a>	
+			</div>
+		</div>
+		<div class="container">
+			<div class="sixteen columns top">
+				<div class="six columns alpha">
+					<div class="logo">
+						<a href="http://www.forte-music-community.appspot.com">
+							<img src="/static/images/logo.png" alt="Forte Music">
+						</a>			
+					</div>
+				</div>
+				<div class="ten columns omega">
+					<nav>
+						<h7>Welcome <a href="/profile/{{username}}">{{username}}</a></h7>
+						<ul>
+							<li><a href="http://www.forte-music-community.appspot.com">Home</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/events">Events</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/forum/home">Forum</a></li>
+							<li>| <a href="http://www.forte-music-community.appspot.com/editprofile">Edit Profile</a></li>
+							<li>
+								<form action="/logout" method="post">
+									<input type="hidden" name="check" value="{{check}}">
+									<input type="submit" name="Logout" value="Logout">
+								</form>
+							</li>
+						</ul>
+					</nav>
+				</div>			
+			</div>
+
+			<div class="sixteen columns body">
+				<h2>Events</h2>
+				<div class="search">
+					<form method="post">
+						<input id="find-event" type="text" name="event-name" placeholder="Event Name">
+						<input type="submit" value="Find" name="search">
+						<a href="#" data-reveal-id="myModal" data-animation="fade"><button id="add-event">Add Event</button></a>
+					</form>	
+				</div>
+				<span class="confirm">{{message}}</span>
+				<div class="event-list">
+					<ul>
+						{% if events %}
+						{% for event in events %}
+						<li class="event">
+							<h5 class="header">{{event.name}} - {{event.city}}</h5>
+							<img id="event-img" src="/static/images/calendar.png" alt="Event Image">
+							<div class="details">
+								<p>Location: {{event.city}}</p>
+								<p>Time: {{event.time}}</p>
+								<p>RSVP Count: {{event.numattendees}}</p>
+							</div>
+							<form method="post">
+								<input type="hidden" name="rsvp-id" value="{{event.key().id()}}">
+								<input type="hidden" name="rsvp-name" value="{{event.name}}">
+								<input id="rsvp-button" name="RSVP-button" type="submit" value="RSVP">
+							</form>
+						</li>
+						{% endfor %}
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+
+			<div class="sixteen columns bottom">
+				<footer>
+					<p class="left">
+						<a href="">Legal</a> |
+						<a href="">Security</a> |
+						<a href="">Contact</a>
+					</p>
+					<p class="right">Made in Toronto <img src="/static/images/canada.png" alt="Canada"></p>	
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

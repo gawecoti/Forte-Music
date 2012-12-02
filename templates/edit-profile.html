@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Forte Music Community - Edit Profile</title>
+		<link rel="stylesheet" href="/static/base.css">
+		<link rel="stylesheet" href="/static/skeleton.css">
+		<link rel="stylesheet" href="/static/navigation.css">
+		<link rel="stylesheet" href="/static/edit-profile.css">
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sixteen columns top">
+				<div class="six columns alpha">
+					<div class="logo">
+						<a href="http://www.forte-music-community.appspot.com">
+							<img src="static/images/logo.png" alt="Forte Music">
+						</a>			
+					</div>
+				</div>
+				<div class="ten columns omega">
+					<nav>
+						<h7 id="user">Welcome <a href="/profile/{{username}}">{{username}}</a></h7>
+						<ul>
+							<li><a href="http://www.forte-music-community.appspot.com">Home</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/events">Events</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/forum/home">Forum</a></li>
+							<li>| <a href="http://www.forte-music-community.appspot.com/editprofile">Edit Profile</a></li>
+							<li>
+								<form action="/logout" method="post">
+									<input type="hidden" name="check" value="{{check}}">
+									<input type="submit" name="Logout" value="Logout">
+								</form>
+							</li>
+						</ul>
+					</nav>
+				</div>			
+			</div>
+
+			<div class="sixteen columns body">
+				<span class="red">{{response}}</span>
+				<span class="green">{{confirm}} <a id="thick" href="http://www.forte-music-community.appspot.com/profile/{{username}}">{{here}}</a></span>
+				<form class="edit-info" method="post" enctype="multipart/form-data">
+					<h2 class="add">Edit Profile</h2>
+					<h6 class="visit">Please fill out all fields</h6>
+					<input type="text" name="hometown" placeholder="City">
+					<br>
+					<input type="text" name="music" placeholder="Music Genres">
+					<br>
+					<h4 class="add">Add a Soundcloud Widget</h4>
+					<h6 class="visit">Visit the <a href="http://soundcloud.com/tracks">soundcloud</a> website, click share on a widget, and copy the iframe link.</h6>
+					<input type="text" name="soundcloud" placeholder="Soundcloud Link" width="500px">
+					<h4>Profile Picture</h4>
+					<input type="file" name="image" size="100">
+					<br>
+					<input class="edit-button" type="submit" value="Submit">
+				</form>
+			</div>
+
+			<div class="sixteen columns bottom">
+				<footer>
+					<p class="left">
+						<a href="">Legal</a> |
+						<a href="">Security</a> |
+						<a href="">Contact</a>
+					</p>
+					<p class="right">Made in Toronto <img src="static/images/canada.png" alt="Canada"></p>	
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

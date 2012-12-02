@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Forte Music Community - Profile</title>
+		<link rel="stylesheet" href="/static/base.css">
+		<link rel="stylesheet" href="/static/skeleton.css">
+		<link rel="stylesheet" href="/static/navigation.css">
+		<link rel="stylesheet" href="/static/profile.css">
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sixteen columns top">
+				<div class="six columns alpha">
+					<div class="logo">
+						<a href="http://www.forte-music-community.appspot.com">
+							<img src="/static/images/logo.png" alt="Forte Music">
+						</a>
+					</div>
+				</div>
+				<div class="ten columns omega">
+					<nav>
+						<h7 id="user">Welcome <a href="/profile/{{username}}">{{username}}</a></h7>
+						<ul>
+							<li><a href="http://www.forte-music-community.appspot.com">Home</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/events">Events</a></li>
+							<li><a href="http://www.forte-music-community.appspot.com/forum/home">Forum</a></li>
+							<li>| <a href="http://www.forte-music-community.appspot.com/editprofile">Edit Profile</a></li>
+							<li>
+								<form action="/logout" method="post">
+									<input type="hidden" name="check" value="{{check}}">
+									<input type="submit" name="Logout" value="Logout">
+								</form>
+							</li>
+						</ul>
+					</nav>
+				</div>			
+			</div>
+
+			<div class="sixteen columns body">
+				<h2>{{name}}'s Profile</h2>
+				<div class="profile">
+					<img src="/image/{{uid}}" alt="Profile Picture">
+					<ul>
+						<li>Hometown: {{hometown}}</li>
+						<li>Music Genre: {{music}}</li>
+						<li>Posts : {{posts}}</li>
+						<li>Total RSVPs: {{rsvp}}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sixteen columns soundcloud">
+				{% if soundcloud %}
+				{% for links in soundcloud %}
+					<iframe id="sc-widget" width="100%" height="166" scrolling="no" frameborder="no" src="{{links}}"></iframe>
+				{% endfor %}
+				{% endif %}
+			</div>
+
+			<div class="sixteen columns bottom">
+				<footer>
+					<p class="left">
+						<a href="">Legal</a> |
+						<a href="">Security</a> |
+						<a href="">Contact</a>
+					</p>
+					<p class="right">Made in Toronto <img src="/static/images/canada.png" alt="Canada"></p>	
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
