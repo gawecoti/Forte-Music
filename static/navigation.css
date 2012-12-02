@@ -62,7 +62,7 @@ nav ul li a {
 	letter-spacing: 1pt;
 }
 
-nav ul li a:hover {
+ul li a:hover {
 	border-bottom: 1px solid #AAAAAA;
 }
 

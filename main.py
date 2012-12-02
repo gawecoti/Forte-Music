@@ -576,8 +576,6 @@ class EditProfileHandler(Handler):
 			response = "Please fill out all information"
 			self.render('edit-profile.html',username = username,response = response)
 
-		
-
 class ImageHandler(Handler):
 	def get(self,uid):
 		user = User.by_id(int(uid[1:]))
@@ -586,6 +584,24 @@ class ImageHandler(Handler):
 			self.response.out.write(user.avatar)
 		else:
 			self.redirect('/static/images/naeem.png')
+
+class About(Handler):
+	def get(self):
+		if self.user:
+			username = self.user.name
+			CSRF = make_secure_val_CSRF(username)
+			self.render('about.html',user = self.user,username = username,check = CSRF)
+		else:
+			self.render('about.html',user = self.user)
+
+class Contact(Handler):
+	def get(self):
+		if self.user:
+			username = self.user.name
+			CSRF = make_secure_val_CSRF(username)
+			self.render('contact.html',user = self.user,username = username,check = CSRF)
+		else:
+			self.render('contact.html',user = self.user)
 
 class Logout(Handler):
 	def post(self):
@@ -605,4 +621,6 @@ app = webapp2.WSGIApplication([('/', HomeHandler),
 							   ('/profile' + PAGE_RE,ProfileHandler),
 							   ('/editprofile',EditProfileHandler),
 							   ('/image' + PAGE_RE,ImageHandler),
+							   ('/about',About),
+							   ('/contact',Contact),
 							   ('/logout',Logout)],debug=True)
