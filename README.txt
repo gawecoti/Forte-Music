@@ -1,7 +1,6 @@
 Forte Music Community - An Online Community for Professional Musicians
 
-This is a web application I developed in Fall 2012 using the webapp2 Python framework. The site was 
-deployed on Google App Engine.
+This is a web application I developed in Fall 2012 using the webapp2 Python framework. The site was deployed on Google App Engine. 
 
 Features:
 - Secure login system (password hashing; text escaping)
