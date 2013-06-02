@@ -1,4 +1,4 @@
-Forte Music Community - An Online Community for Professional Musicians
+Forte Music Community App
 =============================
 
 This is a web application I developed in Fall 2012 using the webapp2 Python framework. The site was deployed on Google App Engine. 
